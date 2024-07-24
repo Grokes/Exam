@@ -60,7 +60,7 @@ namespace Exam.Models
         }
         public void Left()
         {
-            if (PlayerPositionX - 1 >= Width)
+            if (PlayerPositionX - 1 >= 0)
             {
                 Map[PlayerPositionY][PlayerPositionX] = 0;
                 PlayerPositionX -= 1;

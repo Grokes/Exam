@@ -1,0 +1,30 @@
+﻿.GameField {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.GameField .GameFieldRow {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.GameField .GameFieldRow div {
+    --cell-size: 5vmin;
+    width: var(--cell-size);
+    height: var(--cell-size);
+    background-image: url("/assets/Cell.png");
+    background-size: auto 100%;
+}
+
+.GameField .GameFieldRow .Player{
+    background-image: url("/assets/Player.png");
+}

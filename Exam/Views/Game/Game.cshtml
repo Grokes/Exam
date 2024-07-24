@@ -1,0 +1,21 @@
+﻿@model Exam.Models.GameFieldModel
+@{
+    ViewData["Title"] = "Game";
+}
+
+@section HeadResources
+{
+    <link rel="stylesheet" href="~/css/Game.css"></link>
+    <script src="/js/game.js" type="module"></script>
+}
+
+<button id="UpBtn">Вверх</button>
+<button id="LeftBtn">Влево</button>
+<button id="RightBtn">Вправо</button>
+<button id="DownBtn">Вниз</button>
+
+<div class="text-center GameContainer">
+    @{
+        await Html.RenderPartialAsync("GameField", Model);
+    }
+</div>

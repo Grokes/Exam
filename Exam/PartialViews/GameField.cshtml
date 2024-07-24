@@ -1,0 +1,13 @@
+﻿@model Exam.Models.GameFieldModel
+
+<div class="GameField">
+	@for (int row = 0; row < Model.Height; ++row)
+	{
+		<div class="GameFieldRow">
+			@for (int column = 0; column < Model.Width; ++column)
+			{
+				await Html.RenderPartialAsync("GameFieldCell", Model.Map[row][column]);
+			}
+		</div>
+	}
+</div>
